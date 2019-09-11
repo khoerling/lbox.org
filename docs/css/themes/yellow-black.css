@@ -52,7 +52,7 @@ a.footer {
   pointer-events: none;
   animation: buildInBg 1s ease-in .25s;
   animation-fill-mode: forwards;
-  background: url("https://raw.githubusercontent.com/DimensionSoftware/powerbulletin/master/public/images/live_support.jpg") no-repeat 50% 100%;
+  background: url("https://raw.githubusercontent.com/DimensionSoftware/powerbulletin/master/public/images/responsiveness.jpg") no-repeat 50% 100%;
   background-size: cover;
   position: absolute;
   min-height: 100vh;
@@ -116,6 +116,21 @@ small {
 
 .icons-social a svg path{
   fill: #1E1E1E;
+}
+
+@keyframes rotateIn {
+  0% {
+    transform: rotate(-100deg) scale(5.8);
+  }
+  80% {
+    transform: scale(.8);
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
 }
 
 @keyframes buildInBg {
@@ -187,7 +202,8 @@ h2.tagline {
   opacity: .75;
   margin-top: 60px;
   transition: opacity .3s ease-in, transform .2s cubic-bezier(0.680, -0.550, 0.265, 1.550) .1s;
-  animation: buildInQr .5s ease-in;
+  animation: rotateIn .5s ease-in;
+
 }
 .qrcode:hover {
   opacity: 1;
